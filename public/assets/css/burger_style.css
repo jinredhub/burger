@@ -1,9 +1,21 @@
 #form {
-	width: 33%;
+	margin: 0 auto;
+	text-align: center;
 }
 #order {
-	width: 33%;
+	width: 46%;
+	background-color: yellow;
+	float: left;
+	border: 2px solid green;
+	border-radius: 5px;
+	margin: 10px 15px;
 }
 #devoured {
-	width: 33%;
+	width: 46%;
+	background-color: orange;
+	float: left;
+	border: 2px solid red;
+	border-radius: 5px;
+	margin: 10px;
 }
+
