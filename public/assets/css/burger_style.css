@@ -2,6 +2,9 @@
 	margin: 0 auto;
 	text-align: center;
 }
+textarea{
+	width: 300px;
+}
 #order {
 	width: 46%;
 	background-color: yellow;
