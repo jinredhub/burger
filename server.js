@@ -5,7 +5,7 @@ var exphbs = require("express-handlebars");
 
 
 var app = express();
-var port = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 // Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -23,6 +23,6 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
-app.listen(port, function() {
-  console.log("listening on port", port);
+app.listen(PORT, function() {
+  console.log("listening on port", PORT);
 });
