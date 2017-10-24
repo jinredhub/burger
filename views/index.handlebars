@@ -1,36 +1,38 @@
 
-<div>
-	<div id="form">
-		<h1>Eat-Da-Burger</h1>
-		<img src="assets/img/burger.jpg" width="200">
-		<br>
-		<textarea type="text"></textarea>
-		<br>
-		<input type="submit" id="submit-btn">
-		<br><br>
+<div id="min-width">
+	<div>
+		<div id="form">
+			<h1>Eat-Da-Burger</h1>
+			<img src="assets/img/burger.jpg" width="200">
+			<br>
+			<textarea type="text"></textarea>
+			<br>
+			<input type="submit" id="submit-btn">
+			<br><br>
+		</div>
 	</div>
-</div>
 
-<div id="order">
-	<ul>
-		{{#each burgers}}
-			{{#unless this.devoured}}
-			<li>
-				<p>{{this.id}}. {{this.burger_name}} <button class="del-btn" data-id="{{this.id}}">Devour it!</button> </p>	
-			</li>		
-			{{/unless}}
-		{{/each}}
-	</ul>
-</div>
-
-<div id="devoured">
-	<ul>
-		{{#each burgers}}
-			{{#if this.devoured}}
+	<div id="order">
+		<ul>
+			{{#each burgers}}
+				{{#unless this.devoured}}
 				<li>
-					<p>{{this.id}}. {{this.burger_name}}</p>	
+					<p>{{this.id}}. {{this.burger_name}} <button class="del-btn" data-id="{{this.id}}">Devour it!</button> </p>	
 				</li>		
-			{{/if}}
-		{{/each}}
-	</ul>
+				{{/unless}}
+			{{/each}}
+		</ul>
+	</div>
+
+	<div id="devoured">
+		<ul>
+			{{#each burgers}}
+				{{#if this.devoured}}
+					<li>
+						<p>{{this.id}}. {{this.burger_name}}</p>	
+					</li>		
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
 </div>
