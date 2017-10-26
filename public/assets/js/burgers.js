@@ -5,6 +5,15 @@ $(function(){
 		var newBurger = {
 			burger_name : $("textarea").val().trim()
 		}
+
+		var burgerName = $("textarea").val().trim();
+		console.log("name of newBurger: ", burgerName);
+		for (i=0;i<burgerName.length;i++){
+			if (burgerName[i] === "'"){
+				alert("cannot order that burger");
+				return;
+			}
+		}
 		console.log("textarea",newBurger);
 
 		$.ajax("/api/burgers", {
